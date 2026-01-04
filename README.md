@@ -72,18 +72,16 @@ pip install pybullet numpy torch openai-whisper speechrecognition ollama
 **Input: "Grab the green one and drop it off."**
 
 **LLM Generated Plan:**
-JSON
-
+```json
 [
   { "action": "move_to", "target": "green_box" },
   { "action": "magnet", "state": "on" },
   { "action": "move_to", "target": "drop_zone" },
   { "action": "magnet", "state": "off" }
 ]
+```
 
 ### 👤 Author
-Jai Doshi (JD)
-Masters Student, Mechatronics @ RWU Germany
-Focus: Robotics, Deep Learning, Sensor Fusion
-
+**Jai Doshi (JD)**  
+Masters Student: Mechatronics [@RWU GERMANY](https://www.rwu.de/en)
 
