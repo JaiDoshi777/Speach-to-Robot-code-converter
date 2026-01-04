@@ -43,6 +43,7 @@ graph LR
     C -->|JSON Plan| D[Robot Controller]
     D -->|Inverse Kinematics| E[PyBullet KUKA Sim]
 ```
+
 1) The Ear: Captures audio via SpeechRecognition, pre-processes signal (noise reduction), and transcribes using Whisper.
 2) The Brain: The transcript is fed into Mistral with a strict System Prompt. The LLM converts unstructured text into a structured JSON list of actions (e.g., move_to, magnet_on).
 3) The Body: A Python controller parses the JSON, calculates Inverse Kinematics (IK) for the KUKA arm, and handles physics constraints.
