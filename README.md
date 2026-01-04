@@ -73,6 +73,7 @@ pip install pybullet numpy torch openai-whisper speechrecognition ollama
 
 **LLM Generated Plan:**
 JSON
+
 [
   { "action": "move_to", "target": "green_box" },
   { "action": "magnet", "state": "on" },
@@ -82,9 +83,7 @@ JSON
 
 ### 👤 Author
 Jai Doshi (JD)
-
 Masters Student, Mechatronics @ RWU Germany
-
 Focus: Robotics, Deep Learning, Sensor Fusion
 
 
