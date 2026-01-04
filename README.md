@@ -68,5 +68,21 @@ pip install pybullet numpy torch openai-whisper speechrecognition ollama
     "Pick up the blue box."
 5) Watch the robot plan and execute the task!
 
+### 🧠 Logic Sample
+**Input: "Grab the green one and drop it off."**
+
+**LLM Generated Plan:**
+JSON
+[
+  { "action": "move_to", "target": "green_box" },
+  { "action": "magnet", "state": "on" },
+  { "action": "move_to", "target": "drop_zone" },
+  { "action": "magnet", "state": "off" }
+]
+
+###👤 Author
+Jai Doshi (JD)
+Masters Student, Mechatronics @ RWU Germany
+Focus: Robotics, Deep Learning, Sensor Fusion
 
 
