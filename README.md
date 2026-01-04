@@ -18,10 +18,11 @@ The entire pipeline—Speech Recognition, Reasoning, and Simulation—runs **loc
 * **Physics Simulation:** Implements a magnetic gripper logic using PyBullet constraints to handle object manipulation reliability.
 
 ### 🛠️ Tech Stack
-
-1) The Ear: Captures audio via SpeechRecognition, pre-processes signal (noise reduction), and transcribes using Whisper.
-2) The Brain: The transcript is fed into Mistral with a strict System Prompt. The LLM converts unstructured text into a structured JSON list of actions (e.g., move_to, magnet_on).
-3) The Body: A Python controller parses the JSON, calculates Inverse Kinematics (IK) for the KUKA arm, and handles physics constraints.
+Language: Python 3.x
+Simulation: PyBullet (Physics engine)
+ASR (Speech-to-Text): OpenAI Whisper (turbo model)
+LLM (Logic): Ollama running mistral
+Libraries: speech_recognition, numpy, torch, msvcrt
 
 ---
 
@@ -35,3 +36,6 @@ graph LR
     B -->|Text| C{Ollama / Mistral}
     C -->|JSON Plan| D[Robot Controller]
     D -->|Inverse Kinematics| E[PyBullet KUKA Sim]
+1) The Ear: Captures audio via SpeechRecognition, pre-processes signal (noise reduction), and transcribes using Whisper.
+2) The Brain: The transcript is fed into Mistral with a strict System Prompt. The LLM converts unstructured text into a structured JSON list of actions (e.g., move_to, magnet_on).
+3) The Body: A Python controller parses the JSON, calculates Inverse Kinematics (IK) for the KUKA arm, and handles physics constraints.
