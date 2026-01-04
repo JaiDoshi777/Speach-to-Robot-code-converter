@@ -12,17 +12,17 @@ This project implements an **end-to-end voice control pipeline** for a KUKA iiwa
 The entire pipeline—Speech Recognition, Reasoning, and Simulation—runs **locally** (Offline) for privacy and low latency, utilizing GPU acceleration.
 
 ### 🎯 Key Features
-* **Natural Language Understanding:** The robot understands complex commands like *"Grab the red box and put it in the drop zone"* rather than just fixed keywords.
-* **Local Inference:** Uses **OpenAI Whisper (Turbo)** for ASR and **Mistral** for logic, running entirely on local hardware (tested on Intel i9 + RTX 4070).
-* **Modular Architecture:** Decoupled "Ear" (Sensors), "Brain" (Planner), and "Body" (Actuator) modules.
-* **Physics Simulation:** Implements a magnetic gripper logic using PyBullet constraints to handle object manipulation reliability.
+1) **Natural Language Understanding:** The robot understands complex commands like *"Grab the red box and put it in the drop zone"* rather than just fixed keywords.
+2) **Local Inference:** Uses **OpenAI Whisper (Turbo)** for ASR and **Mistral** for logic, running entirely on local hardware (tested on Intel i9 + RTX 4070).
+3) **Modular Architecture:** Decoupled "Ear" (Sensors), "Brain" (Planner), and "Body" (Actuator) modules.
+4) **Physics Simulation:** Implements a magnetic gripper logic using PyBullet constraints to handle object manipulation reliability.
 
 ### 🛠️ Tech Stack
-1) Language: Python 3.12
-2) Simulation: PyBullet (Physics engine)
-ASR (Speech-to-Text): OpenAI Whisper (turbo model)
-LLM (Logic): Ollama running mistral
-Libraries: speech_recognition, numpy, torch, msvcrt
+* **Language:** Python 3.12
+* **Simulation:** PyBullet (Physics engine)
+* **ASR (Speech-to-Text):** OpenAI Whisper (turbo model)
+* **LLM (Logic):** Ollama running mistral
+* **Libraries:** speech_recognition, numpy, torch, msvcrt
 
 ---
 
@@ -43,15 +43,30 @@ graph LR
 3) The Body: A Python controller parses the JSON, calculates Inverse Kinematics (IK) for the KUKA arm, and handles physics constraints.
 
 ### 🚀 Installation & Setup
-1. Prerequisites
+**1. Prerequisites**
 Ensure you have Python installed and an NVIDIA GPU (recommended for Whisper/Ollama speed).
 
-2. Install Dependencies
+**2. Install Dependencies**
 pip install pybullet numpy torch openai-whisper speechrecognition ollama
 (Note: You may need pyaudio for microphone access. On Windows: pip install pipwin && pipwin install pyaudio)
 
-3. Setup Ollama (The Brain)
-Download and install [Ollama](https://ollama.com/).
+**3. Setup Ollama (The Brain)**
+1) Download and install
+    [Ollama](https://ollama.com/).
 
-Pull the Mistral model:
+2) Pull the Mistral model:
+    ollama pull mistral
+
+3) Start the server (keep this terminal open):
+    ollama serve
+
+### 🕹️ Usage
+1) Run the main script: python main.py
+2) The PyBullet GUI will launch.
+3) Press ENTER in the console to trigger the listening mode.
+4) Speak a command:
+    "Pick up the blue box."
+5) Watch the robot plan and execute the task!
+
+
 
