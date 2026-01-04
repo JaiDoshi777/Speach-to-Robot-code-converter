@@ -36,12 +36,6 @@ graph LR
     B -->|Text| C{Ollama / Mistral}
     C -->|JSON Plan| D[Robot Controller]
     D -->|Inverse Kinematics| E[PyBullet KUKA Sim]
-```mermaid
-graph LR
-    A[User Voice] -->|Audio| B(Whisper ASR)
-    B -->|Text| C{Ollama / Mistral}
-    C -->|JSON Plan| D[Robot Controller]
-    D -->|Inverse Kinematics| E[PyBullet KUKA Sim]
 ```
 
 1) The Ear: Captures audio via SpeechRecognition, pre-processes signal (noise reduction), and transcribes using Whisper.
