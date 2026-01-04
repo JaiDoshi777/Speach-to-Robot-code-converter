@@ -80,7 +80,7 @@ JSON
   { "action": "magnet", "state": "off" }
 ]
 
-###👤 Author
+### 👤 Author
 Jai Doshi (JD)
 Masters Student, Mechatronics @ RWU Germany
 Focus: Robotics, Deep Learning, Sensor Fusion
