@@ -18,8 +18,8 @@ The entire pipeline—Speech Recognition, Reasoning, and Simulation—runs **loc
 * **Physics Simulation:** Implements a magnetic gripper logic using PyBullet constraints to handle object manipulation reliability.
 
 ### 🛠️ Tech Stack
-Language: Python 3.12
-Simulation: PyBullet (Physics engine)
+1) Language: Python 3.12
+2) Simulation: PyBullet (Physics engine)
 ASR (Speech-to-Text): OpenAI Whisper (turbo model)
 LLM (Logic): Ollama running mistral
 Libraries: speech_recognition, numpy, torch, msvcrt
