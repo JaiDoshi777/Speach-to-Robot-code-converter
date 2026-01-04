@@ -55,11 +55,13 @@ pip install pybullet numpy torch openai-whisper speechrecognition ollama
     [Ollama](https://ollama.com/).
 
 2) Pull the Mistral model:
+   ```
     ollama pull mistral
-
-3) Start the server (keep this terminal open):
+    ```
+4) Start the server (keep this terminal open):
+   ```
     ollama serve
-
+    ```
 ### 🕹️ Usage
 1) Run the main script: python main.py
 2) The PyBullet GUI will launch.
