@@ -1,6 +1,6 @@
 <img width="2816" height="1536" alt="Gemini_Generated_Image_tpzyzktpzyzktpzy" src="https://github.com/user-attachments/assets/1982028a-19f1-4287-ad36-f8acde9c9777" />
 
-# 🤖 Voice-Controlled KUKA Robot with LLM Planning
+# 🤖 Control your KUKA Robot with voice and LLM Planning
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![PyBullet](https://img.shields.io/badge/Simulation-PyBullet-orange)
